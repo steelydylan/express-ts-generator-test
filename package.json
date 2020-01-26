@@ -1,0 +1,19 @@
+{
+  "name": "express-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dtsgen": "dtsgen ./openapi/openapi.yml -o ./@types/openapi.d.ts",
+    "apigen": "apigen -s ./@types/openapi.d.ts -d ./@types/expressapi.ts",
+    "gen": "npm run dtsgen && npm run apigen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dtsgenerator": "^2.3.2",
+    "express-ts-generator": "^1.0.0"
+  }
+}
